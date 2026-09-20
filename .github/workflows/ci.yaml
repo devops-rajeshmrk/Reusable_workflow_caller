@@ -1,0 +1,14 @@
+name: Main Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  
+jobs:
+  call-request-ci:
+    uses: iam-rajeshmrk/ghac_resuable_workflows/.github/workflows/reusable_workflow.yaml@v1
+    with:
+      node-version: ‘${{vars.node_version}}’
+      run-tests: true
