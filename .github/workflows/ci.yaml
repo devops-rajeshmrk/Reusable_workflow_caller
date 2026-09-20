@@ -1,4 +1,4 @@
-name: Main Pipeline
+name: Main Pipeline demo
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   
 jobs:
   call-request-ci:
-    uses: iam-rajeshmrk/ghac_resuable_workflows/.github/workflows/reusable_workflow.yaml@v1
+    uses: iam-rajeshmrk/ghac-reusable-workflow/.github/workflows/reusable_workflow.yml@main
     with:
       node-version: ‘${{vars.node_version}}’
       run-tests: true
